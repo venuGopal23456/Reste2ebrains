@@ -37,4 +37,10 @@ public class topics {
   public void updatetopic(@RequestBody topicpojo topic, @PathVariable String name) {
     topicService.updatetopic(topic, name);
   }
+
+  // Delete a particualar Resource
+  @RequestMapping(method = RequestMethod.DELETE, value = "/topics/{name}")
+  public void deletetopic(@PathVariable String name) {
+    topicService.deletetopic(name);
+  }
 }

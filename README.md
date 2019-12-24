@@ -14,6 +14,12 @@
 2)Get the @RequestMapping properties (method ) and specify the enumeration requestmethod.post
 3)In TopicService.java ,change the immuttable array into mutable by creating new arraylist.
 
+//add update and Delete Resource
+1)it almost same as post method.
+2)Used for loop to traverse through the loop.
+3)Delete is same as update.
+4)Used Remove if statement.
+
 
 
 
