@@ -16,12 +16,9 @@ public class TopicService {
         new topicpojo("mani", 56, 96),
         new topicpojo("tilo", 56, 26)));
 
-
-   public  List<topicpojo> getTopics()
-   {
-       return topics;
-
-   }
+  public List<topicpojo> getTopics() {
+    return topics;
+  }
 
    ///Return only specific object based on name
    public  topicpojo getTopics(String name)
