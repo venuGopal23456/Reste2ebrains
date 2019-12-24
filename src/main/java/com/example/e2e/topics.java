@@ -21,8 +21,14 @@ public class topics {
   }
 
   // Return base on the name (Single value)
-  @RequestMapping("/topics/{name}")
+  /*@RequestMapping("/topics/{name}")
   public topicpojo getTopics(@PathVariable String name) {
+    return topicService.getTopics(name);
+  }*/
+
+  // or
+  @RequestMapping("/topics/{first}")
+  public topicpojo getTopics(@PathVariable("first") String name) {
     return topicService.getTopics(name);
   }
 
