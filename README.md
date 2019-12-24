@@ -4,3 +4,6 @@
 2)add parent and web dependency in pom
 3)create main class and controller class
 4)create pojo class to return json string as a response
+
+
+5)Create method which return response based on primary key

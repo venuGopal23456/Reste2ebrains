@@ -1,5 +1,7 @@
 package com.example.e2e;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,14 +14,19 @@ import java.util.List;
 @RestController
 public class topics {
 
+  @Autowired
+  private TopicService topicService;
+
+  //Return list of topics
   @RequestMapping("/topics")
   public List<topicpojo> topic() {
 
-    return Arrays.asList(
-        new topicpojo("venu", 25, 100),
-        new topicpojo("gopal", 67, 250),
-        new topicpojo("sharma", 87, 90),
-        new topicpojo("mani", 56, 96),
-        new topicpojo("tilo", 56, 26));
+    return topicService.getTopics();
+  }
+
+  //Return base on the name (Single value)
+  @RequestMapping("/topics/{name}")
+  public topicpojo getTopics(@PathVariable String name) {
+    return topicService.getTopics(name);
   }
 }
