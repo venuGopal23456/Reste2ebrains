@@ -7,3 +7,16 @@
 
 
 5)Create method which return response based on primary key
+
+
+//add post method
+1)Create a postmethod with no return type and then get the post body convert to topic instance and add to the servcie
+2)Get the @RequestMapping properties (method ) and specify the enumeration requestmethod.post
+3)In TopicService.java ,change the immuttable array into mutable by creating new arraylist.
+
+
+
+
+//To run this program
+mvn Spring-boot:run
+localhost:8080

@@ -2,18 +2,19 @@ package com.example.e2e;
 
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 @Service
 public class TopicService {
 
-  private List<topicpojo> topics =Arrays.asList(
+  private List<topicpojo> topics =new ArrayList<>(Arrays.asList(
             new topicpojo("venu", 25, 100),
         new topicpojo("gopal", 67, 250),
         new topicpojo("sharma", 87, 90),
         new topicpojo("mani", 56, 96),
-        new topicpojo("tilo", 56, 26));
+        new topicpojo("tilo", 56, 26)));
 
 
    public  List<topicpojo> getTopics()
@@ -29,5 +30,7 @@ public class TopicService {
 }
 
 
-
+    public void addtopic(topicpojo topic) {
+       topics.add(topic);
+    }
 }
